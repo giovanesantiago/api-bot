@@ -26,4 +26,5 @@ public class BotController {
     public String ligarBot(@RequestBody Dados dados) {
         return botService.ligarBoot(dados);
     }
+
 }
