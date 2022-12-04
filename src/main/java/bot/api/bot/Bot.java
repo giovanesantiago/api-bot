@@ -18,7 +18,7 @@ public class Bot {
 
     // Construtor para iniciar a configuração do driver
     public Bot() {
-        System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/driver/chromedriver.exe");
     }
 
     // Abrir bot
@@ -109,4 +109,3 @@ public class Bot {
 
 
 }
-

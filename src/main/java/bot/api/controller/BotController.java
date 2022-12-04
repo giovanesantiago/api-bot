@@ -18,6 +18,7 @@ public class BotController {
     // Recendo ordem para abrir o bot e enviar a img do qrcode
     @GetMapping("/iniciar")
     public String abrirBot() {
+        System.out.println("Controller ok");
         return botService.abrirBot();
     }
 

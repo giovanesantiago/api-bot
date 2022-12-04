@@ -15,6 +15,7 @@ public class BotService {
 
     // Abrindo bot
     public String abrirBot() {
+        System.out.println("Service ok");
         return bot.abrirBot();
     }
 
