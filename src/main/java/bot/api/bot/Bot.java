@@ -4,6 +4,8 @@ import bot.api.model.Dados;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
@@ -15,6 +17,7 @@ public class Bot {
 
     // Driver
     WebDriver driver;
+    ChromeOptions options;
 
     // Construtor para iniciar a configuração do driver
     public Bot() {
@@ -24,6 +27,7 @@ public class Bot {
     // Abrir bot
     public String abrirBot() {
         System.out.println();
+        WebDriverManager.chromedriver().setup();
         // Iniciando driver e abrindo whatsapp
         driver = new ChromeDriver();
         driver.get("https://web.whatsapp.com/");
