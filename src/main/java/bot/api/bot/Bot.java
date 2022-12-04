@@ -17,21 +17,20 @@ public class Bot {
 
     // Driver
     WebDriver driver;
-    ChromeOptions options;
+
 
     // Construtor para iniciar a configuração do driver
     public Bot() {
-        System.setProperty("webdriver.chrome.driver", "bot/api/bot/driver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "bot/api/bot/driver/chromedriver");
     }
 
     // Abrir bot
     public String abrirBot() {
         System.out.println();
+
         WebDriverManager.chromedriver().setup();
         // Iniciando driver e abrindo whatsapp
-        ChromeOptions options = new ChromeOptions();
-        options.setHeadless(true);
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
         driver.get("https://web.whatsapp.com/");
         System.out.println("bot ligado");
 
