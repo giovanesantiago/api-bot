@@ -29,7 +29,9 @@ public class Bot {
         System.out.println();
         WebDriverManager.chromedriver().setup();
         // Iniciando driver e abrindo whatsapp
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.setHeadless(true);
+        driver = new ChromeDriver(options);
         driver.get("https://web.whatsapp.com/");
         System.out.println("bot ligado");
 
