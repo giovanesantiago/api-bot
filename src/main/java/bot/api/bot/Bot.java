@@ -4,7 +4,6 @@ import bot.api.model.Dados;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.util.ArrayList;
@@ -21,7 +20,7 @@ public class Bot {
 
     // Construtor para iniciar a configuração do driver
     public Bot() {
-        System.setProperty("webdriver.chrome.driver", "bot/api/bot/driver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/main/java/bot/api/bot/driver/chromedriver");
     }
 
     // Abrir bot
@@ -39,7 +38,7 @@ public class Bot {
         while (!existe) {
             existe = testeDeCarregamento("//*[@id=\"app\"]/div/div/div[3]/div[1]/div/div[2]/div/canvas");
         }
-        System.out.println("Achou goole");
+        System.out.println("Qr Code");
 
         // Aqui precisa retornar a imagem do qrcode
         return "ok";
