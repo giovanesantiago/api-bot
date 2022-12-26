@@ -27,7 +27,6 @@ public class Bot {
     public String abrirBot() {
         System.out.println();
 
-        WebDriverManager.chromedriver().setup();
         // Iniciando driver e abrindo whatsapp
         driver = new ChromeDriver();
         driver.get("https://web.whatsapp.com/");
